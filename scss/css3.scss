@@ -634,6 +634,34 @@ $defaultOperaSupport: true;
 }
 
 
+//============================================================
+//
+// keyframes
+// @param keyname     :  String
+//
+// @example @include keyframes(rota){
+//    to{
+//        -webkit-transform: rotate(360deg);
+//    }
+// }
+//
+//============================================================
+
+@mixin keyframes( $name ){
+    @-webkit-keyframes $name {
+        @content;
+    }
+    @-moz-keyframes $name {
+        @content;
+    }
+    @-o-keyframes $name {
+        @content;
+    }
+    @keyframes $name {
+        @content;
+    }
+}
+
 
 //============================================================
 //
